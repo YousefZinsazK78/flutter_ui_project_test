@@ -9,4 +9,4 @@
 - [x] second Screen
   - [x] image
   - [x] text
-- [ ] third Screen
+- [x] third Screen
