@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_ui_apps/screen/health_care/health_care_main.dart';
+import 'package:flutter_ui_apps/screen/movie_app_ui/movie_main_app.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,12 +11,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Flutter ui demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
-        useMaterial3: true,
       ),
-      home: const HealthCareMain(),
+      home: const MovieMainApp(),
     );
   }
 }
