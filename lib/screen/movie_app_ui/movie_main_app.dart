@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_ui_apps/screen/movie_app_ui/movie_details_page.dart';
 import 'package:flutter_ui_apps/screen/movie_app_ui/styles.dart';
 import 'package:flutter_ui_apps/utils/custom_extension.dart';
 
@@ -175,16 +176,28 @@ class _MovieMainAppState extends State<MovieMainApp> {
                           return Stack(
                             fit: StackFit.expand,
                             children: [
-                              Container(
-                                width: 90,
-                                margin: const EdgeInsets.all(9),
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(15),
-                                  image: DecorationImage(
-                                    image: AssetImage(
-                                      imageList[index],
+                              GestureDetector(
+                                onTap: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => MovieDetailsPage(
+                                        imageUrl: imageList[index],
+                                      ),
                                     ),
-                                    fit: BoxFit.fill,
+                                  );
+                                },
+                                child: Container(
+                                  width: 90,
+                                  margin: const EdgeInsets.all(9),
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(15),
+                                    image: DecorationImage(
+                                      image: AssetImage(
+                                        imageList[index],
+                                      ),
+                                      fit: BoxFit.fill,
+                                    ),
                                   ),
                                 ),
                               ),
